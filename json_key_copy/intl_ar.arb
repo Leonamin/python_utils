@@ -1,0 +1,468 @@
+{
+    "navRecord": "سجل",
+    "@navRecord": {
+        "description": "바텀 네비게이션바 몸무게 기록 탭 라벨"
+    },
+    "navCalendar": "التقويم",
+    "@navCalendar": {
+        "description": "바텀 네비게이션바 달력 탭 라벨"
+    },
+    "navStatistics": "الإحصاءات",
+    "@navStatistics": {
+        "description": "바텀 네비게이션바 통계 탭 라벨"
+    },
+    "navSettings": "الإعدادات",
+    "@navSettings": {
+        "description": "바텀 네비게이션바 설정 탭 라벨"
+    },
+    "labelDialogCancel": "إلغاء",
+    "@labelDialogCancel": {
+        "description": "다이얼로그 취소 동작 버튼 라벨"
+    },
+    "labelDialogClose": "إغلاق",
+    "@labelDialogClose": {
+        "description": "다이얼로그 닫기 동작 버튼 라벨"
+    },
+    "labelDialogConfirm": "تأكيد",
+    "@labelDialogConfirm": {
+        "description": "다이얼로그 확인 동작 버튼 라벨"
+    },
+    "titleDialogNetworkError": "خطأ في الشبكة",
+    "@titleDialogNetworkError": {
+        "description": "네트워크 에러 다이얼로그 타이틀"
+    },
+    "contentDialogNetworkError": "فشل في الاتصال بالخادم. يرجى التحقق من اتصالك بالشبكة والمحاولة مرة أخرى.",
+    "@contentDialogNetworkError": {
+        "description": "네트워크 에러 다이얼로그 내용"
+    },
+    "buttonNetworkRetry": "إعادة المحاولة",
+    "@buttonNetworkRetry": {
+        "description": "네트워크 에러 다이얼로그 재시도 버튼 라벨"
+    },
+    "titleWeightDialogInput": "تحديد الوزن",
+    "@titleWeightDialogInput": {
+        "description": "몸무게 설정 다이얼로그 타이틀"
+    },
+    "labelTextAreaHint": "أدخل هنا",
+    "@labelTextAreaHint": {
+        "description": "텍스트 입력 힌트"
+    },
+    "labelTextAreaInput": "إدخال",
+    "@labelTextAreaInput": {
+        "description": "텍스트 입력 라벨"
+    },
+    "labelRecordNoteHint": "ملاحظة",
+    "@labelRecordNoteHint": {
+        "description": "몸무게 기록 화면 노트 입력 힌트"
+    },
+    "buttonRecordSaveWeight": "حفظ",
+    "@buttonRecordSaveWeight": {
+        "description": "몸무게 기록 화면 저장 버튼 라벨"
+    },
+    "buttonRecordRegistHeight": "تسجيل الطول",
+    "@buttonRecordRegistHeight": {
+        "description": "키 설정 버튼 라벨"
+    },
+    "toastMessageRecordFailedToLoadWeights": "فشل في تحميل سجل الوزن",
+    "@toastMessageRecordFailedToLoadWeights": {
+        "description": "몸무게 불러오기 실패 토스트 메시지"
+    },
+    "toastMessageRecordFailedToRegistWeight": "فشل في تسجيل الوزن",
+    "@toastMessageRecordFailedToRegistWeight": {
+        "description": "몸무게 기록 실패 토스트 메시지"
+    },
+    "toastMessageRecordFailedToEditWeight": "فشل في تعديل سجل الوزن",
+    "@toastMessageRecordFailedToEditWeight": {
+        "description": "몸무게 수정 실패 토스트 메시지"
+    },
+    "toastMessageRecordSuccessToRegistWeight": "تم تسجيل الوزن بنجاح",
+    "@toastMessageRecordSuccessToRegistWeight": {
+        "description": "몸무게 기록 성공 토스트 메시지"
+    },
+    "toastMessageRecordSuccessToSaveRecord": "تم حفظ سجل الوزن بنجاح",
+    "@toastMessageRecordSuccessToSaveRecord": {
+        "description": "몸무게 기록 저장 성공 토스트 메시지"
+    },
+    "toastMessageRecordFailedToSaveRecord": "فشل في حفظ سجل الوزن",
+    "@toastMessageRecordFailedToSaveRecord": {
+        "description": "몸무게 기록 저장 실패 토스트 메시지"
+    },
+    "toastMessageRecordSuccessToDeleteRecord": "تم حذف سجل الوزن بنجاح",
+    "@toastMessageRecordSuccessToDeleteRecord": {
+        "description": "몸무게 기록 삭제 성공 토스트 메시지"
+    },
+    "toastMessageRecordFailedToDeleteRecord": "فشل في حذف سجل الوزن",
+    "@toastMessageRecordFailedToDeleteRecord": {
+        "description": "몸무게 기록 삭제 실패 토스트 메시지"
+    },
+    "toastMessageRecordEnterCorrectFormat": "يرجى إدخال التنسيق الصحيح",
+    "@toastMessageRecordEnterCorrectFormat": {
+        "description": "형식에 맞게 입력해주세요 토스트 메시지"
+    },
+    "toastMessageRecordSuccessToSaveAttachment": "تم حفظ الملاحظة بنجاح",
+    "@toastMessageRecordSuccessToSaveAttachment": {
+        "description": "노트 저장 성공 토스트 메시지"
+    },
+    "toastMessageRecordFailedToSaveAttachment": "فشل في حفظ الملاحظة",
+    "@toastMessageRecordFailedToSaveAttachment": {
+        "description": "노트 저장 실패 토스트 메시지"
+    },
+    "toastMessageRecordSuccessToDeleteAttachment": "تم حذف الملاحظة بنجاح",
+    "@toastMessageRecordSuccessToDeleteAttachment": {
+        "description": "노트 삭제 성공 토스트 메시지"
+    },
+    "toastMessageRecordFailedToDeleteAttachment": "فشل في حذف الملاحظة",
+    "@toastMessageRecordFailedToDeleteAttachment": {
+        "description": "노트 삭제 실패 토스트 메시지"
+    },
+    "buttonCalendarHeaderToday": "اليوم",
+    "@buttonCalendarHeaderToday": {
+        "description": "달력 헤더 오늘 버튼 라벨"
+    },
+    "contentStatisticsSincePrevious": "منذ التسجيل الأخير",
+    "@contentStatisticsSincePrevious": {
+        "description": "지난 기록 대비 30kg 더 많아요, 더 적어요 등 표시"
+    },
+    "contentStatisticsSinceFirst": "منذ التسجيل الأول",
+    "@contentStatisticsSinceFirst": {
+        "description": "최초 기록 대비 30kg 더 많아요, 더 적어요 등 표시"
+    },
+    "labelStatisticsWeightDiff": "اختلاف الوزن",
+    "@labelStatisticsWeightDiff": {
+        "description": "통계 화면 체중 변화 라벨"
+    },
+    "labelTabStatisticsDaily": "يومي",
+    "@labelTabStatisticsDaily": {
+        "description": "통계 화면 일일 탭 라벨"
+    },
+    "labelTabStatisticsWeekly": "أسبوعي",
+    "@labelTabStatisticsWeekly": {
+        "description": "통계 화면 주간 탭 라벨"
+    },
+    "labelTabStatisticsMonthly": "شهري",
+    "@labelTabStatisticsMonthly": {
+        "description": "통계 화면 월간 탭 라벨"
+    },
+    "labelSettingHeight": "تحديد الطول",
+    "@labelSettingHeight": {
+        "description": "설정 화면 키 설정 라벨"
+    },
+    "labelSettingResetData": "إعادة تعيين جميع البيانات",
+    "@labelSettingResetData": {
+        "description": "설정 화면 데이터 초기화 라벨"
+    },
+    "headerSettingHeightDialog": "تحديد الطول",
+    "@headerSettingHeightDialog": {
+        "description": "키 설정 다이얼로그 타이틀"
+    },
+    "headerSettingResetDataDialog": "إعادة تعيين",
+    "@headerSettingResetDataDialog": {
+        "description": "데이터 초기화 다이얼로그 타이틀"
+    },
+    "contentResetDataDialog": "هل تريد حقًا حذف جميع السجلات؟",
+    "@contentResetDataDialog": {
+        "description": "정말로 모든 데이터를 삭제하실건가요? 다이얼로그 내용"
+    },
+    "labelResetDataDialogReset": "حذف",
+    "@labelResetDataDialogReset": {
+        "description": "삭제 버튼 라벨"
+    },
+    "toastMessageSettingFailedToLoadHeight": "فشل في تحميل الطول",
+    "@toastMessageSettingFailedToLoadHeight": {
+        "description": "키 불러오기 실패 토스트 메시지"
+    },
+    "toastMessageSettingSuccessToSetHeight": "تم تسجيل الطول بنجاح",
+    "@toastMessageSettingSuccessToSetHeight": {
+        "description": "키 등록 성공 토스트 메시지"
+    },
+    "toastMessageSettingFailedToSetHeight": "فشل في تسجيل الطول",
+    "@toastMessageSettingFailedToSetHeight": {
+        "description": "키 등록 실패 토스트 메시지"
+    },
+    "toastMessageSettingFailedToEditHeight": "فشل في تعديل الطول",
+    "@toastMessageSettingFailedToEditHeight": {
+        "description": "키 수정 실패 토스트 메시지"
+    },
+    "toastMessageSettingSuccessToEditHeight": "تم تعديل الطول بنجاح",
+    "@toastMessageSettingSuccessToEditHeight": {
+        "description": "키 수정 성공 토스트 메시지"
+    },
+    "toastMessageSettingSuccessToResetData": "تم إعادة تعيين البيانات بنجاح",
+    "@toastMessageSettingSuccessToResetData": {
+        "description": "데이터 초기화 성공 토스트 메시지"
+    },
+    "toastMessageSettingFailedToResetData": "فشل في إعادة تعيين البيانات",
+    "@toastMessageSettingFailedToResetData": {
+        "description": "데이터 초기화 실패 토스트 메시지"
+    },
+    "toastMessageExitApp": "اضغط مرة أخرى للخروج",
+    "@toastMessageExitApp": {
+        "description": "앱 종료 토스트 메시지"
+    },
+    "toastMessageGoBack": "اضغط مرة أخرى للعودة.",
+    "@toastMessageGoBack": {
+        "description": "두번 눌러서 화면 뒤로 가기 안내문구"
+    },
+    "toastMessageFailedToLoadWeights": "فشل في تحميل الأوزان",
+    "@toastMessageFailedToLoadWeights": {
+        "description": "몸무게 불러오기 실패 토스트 메시지"
+    },
+    "labelSettingLab": "المختبر",
+    "@labelSettingLab": {
+        "description": "تسمية البلاط في شاشة الإعدادات للانتقال إلى شاشة المختبر"
+    },
+    "labelTitleLab": "المختبر",
+    "@labelTitleLab": {
+        "description": "عنوان شاشة المختبر"
+    },
+    "labelLabAllowAd": "السماح بالإعلانات",
+    "@labelLabAllowAd": {
+        "description": "تسمية تفعيل الإعلانات"
+    },
+    "bmi 다이얼로그": "",
+    "bmiMyBMI": "مؤشر كتلة الجسم الخاص بي",
+    "@bmiMyBMI": {
+        "description": "BMI 다이얼로그 타이틀"
+    },
+    "bmiClassification": "تصنيف مؤشر كتلة الجسم",
+    "@bmiClassification": {
+        "description": "BMI 등급표 다이얼로그 제목"
+    },
+    "bmiLessThan": "أقل من {value}",
+    "@bmiLessThan": {
+        "description": "BMI Classification",
+        "placeholders": {
+            "value": {
+                "type": "String",
+                "example": "18.5"
+            }
+        }
+    },
+    "bmiAbove": "{value} أو أكثر",
+    "@bmiAbove": {
+        "description": "BMI Classification",
+        "placeholders": {
+            "value": {
+                "type": "String",
+                "example": "30.0"
+            }
+        }
+    },
+    "일반적 변수": "",
+    "bmiUnderweight": "نقص الوزن",
+    "@bmiUnderweight": {
+        "description": "BMI Classification"
+    },
+    "bmiNormal": "وزن طبيعي",
+    "@bmiNormal": {
+        "description": "BMI Classification"
+    },
+    "bmiPreobesity": "ما قبل السمنة",
+    "@bmiPreobesity": {
+        "description": "BMI Classification"
+    },
+    "bmiObesityClass1": "السمنة من الفئة 1",
+    "@bmiObesityClass1": {
+        "description": "BMI Classification"
+    },
+    "bmiObesityClass2": "السمنة من الفئة 2",
+    "@bmiObesityClass2": {
+        "description": "BMI Classification"
+    },
+    "bmiObesityClass3": "السمنة من الفئة 3",
+    "@bmiObesityClass3": {
+        "description": "BMI Classification"
+    },
+    "동적 텍스트": "",
+    "contentRecordWeightDiff": "{diffType, select, increased {{weightDiff}{unit} أكثر من أمس} decreased {{weightDiff}{unit} أقل من أمس} other {مطابق لأمس}}",
+    "@contentRecordWeightDiff": {
+        "description": "어제 기록과 비교한 체중 변화",
+        "placeholders": {
+            "diffType": {
+                "type": "String",
+                "example": "increased"
+            },
+            "weightDiff": {
+                "type": "String",
+                "example": "1.2"
+            },
+            "unit": {
+                "type": "String",
+                "example": "kg"
+            }
+        }
+    },
+    "toastMessageValidWeightRange": "النطاق المسموح به: {from}{unit} - {to}{unit}",
+    "@toastMessageValidWeightRange": {
+        "description": "무게 설정 가능 범위",
+        "placeholders": {
+            "from": {
+                "type": "String",
+                "example": "1.0"
+            },
+            "to": {
+                "type": "String",
+                "example": "100.0"
+            },
+            "unit": {
+                "type": "String",
+                "example": "kg"
+            }
+        }
+    },
+    "toastMessageMinHeight": "يجب أن يكون الطول على الأقل {height}",
+    "@toastMessageMinHeight": {
+        "description": "최소 키 설정 가능 범위",
+        "placeholders": {
+            "height": {
+                "type": "String",
+                "example": "1.0cm"
+            }
+        }
+    },
+    "toastMessageMaxHeight": "يجب أن يكون الطول على الأكثر {height}",
+    "@toastMessageMaxHeight": {
+        "description": "최대 키 설정 가능 범위",
+        "placeholders": {
+            "height": {
+                "type": "String",
+                "example": "5ft 3in"
+            }
+        }
+    },
+    "후원 기능 업데이트": "",
+    "toastMessageCantOpenLink": "لا يمكن فتح الرابط.",
+    "@toastMessageCantOpenLink": {
+        "description": "링크 열기 실패 토스트 메시지"
+    },
+    "labelSettingDonation": "الدعم",
+    "@labelSettingDonation": {
+        "description": "설정화면 타일 후원하기 화면 이동 타일 라벨"
+    },
+    "titleDonation": "ادعمنا",
+    "@titleDonation": {
+        "description": "후원하기 페이지 제목",
+        "placeholders": {}
+    },
+    "titleDonatorList": "الداعمين للتطبيق",
+    "@titleDonatorList": {
+        "description": "앱에 도움을 주신 분들 페이지 제목",
+        "placeholders": {}
+    },
+    "labelDialogWrite": "كتابة",
+    "@labelDialogWrite": {
+        "description": "작성 버튼 레이블",
+        "placeholders": {}
+    },
+    "titleDonationAfterDonated": "اترك رسالة",
+    "@titleDonationAfterDonated": {
+        "description": "후원 후 메시지 작성 다이얼로그 제목",
+        "placeholders": {}
+    },
+    "contentDonationAfterDonated": "شكرًا لدعمك! هل تود ترك رسالة؟",
+    "@contentDonationAfterDonated": {
+        "description": "후원 후 메시지 작성 다이얼로그 내용",
+        "placeholders": {}
+    },
+    "labelDonationWriteEmptyName": "يرجى إدخال اسمك.",
+    "@labelDonationWriteEmptyName": {
+        "description": "이름을 입력해주세요 에러 메시지",
+        "placeholders": {}
+    },
+    "labelDonationWriteInvalidEmail": "البريد الإلكتروني غير صالح.",
+    "@labelDonationWriteInvalidEmail": {
+        "description": "이메일 주소가 올바르지 않습니다 에러 메시지",
+        "placeholders": {}
+    },
+    "labelDonationWriteEmptyMessage": "يرجى إدخال رسالة.",
+    "@labelDonationWriteEmptyMessage": {
+        "description": "메시지를 입력해주세요 에러 메시지",
+        "placeholders": {}
+    },
+    "labelTimeYears": "{year} سنة",
+    "@labelTimeYears": {
+        "description": "n년을 나타내는 문자열",
+        "placeholders": {
+            "year": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "labelTimeMonths": "{month} شهر",
+    "@labelTimeMonths": {
+        "description": "n개월을 나타내는 문자열",
+        "placeholders": {
+            "month": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "labelTimeDays": "{day} يوم",
+    "@labelTimeDays": {
+        "description": "n일을 나타내는 문자열",
+        "placeholders": {
+            "day": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "labelTimeHours": "{hour} ساعة",
+    "@labelTimeHours": {
+        "description": "n시간을 나타내는 문자열",
+        "placeholders": {
+            "hour": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "labelTimeMinutes": "{minute} دقيقة",
+    "@labelTimeMinutes": {
+        "description": "n분을 나타내는 문자열",
+        "placeholders": {
+            "minute": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "labelTimeSeconds": "{second} ثانية",
+    "@labelTimeSeconds": {
+        "description": "n초를 나타내는 문자열",
+        "placeholders": {
+            "second": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "labelTimeAgo": "منذ {timeStr}",
+    "@labelTimeAgo": {
+        "description": "1분전, 10시간 전 등 시간 지남을 나타내는 문자열",
+        "placeholders": {
+            "timeStr": {
+                "type": "String",
+                "example": "1 دقيقة, 10 ساعات"
+            }
+        }
+    },
+    "labelDonationDonatorName": "اسم المتبرع",
+    "@labelDonationDonatorName": {
+        "description": "후원자의 이름 입력 필드 라벨"
+    },
+    "labelDonationDonatorEmail": "البريد الإلكتروني",
+    "@labelDonationDonatorEmail": {
+        "description": "후원자의 이메일 입력 필드 라벨"
+    },
+    "labelDonationMessage": "رسالة",
+    "@labelDonationMessage": {
+        "description": "후원 메시지 입력 필드 라벨"
+    },
+    "labelDonationDonatorCountry": "اختر الدولة",
+    "@labelDonationDonatorCountry": {
+        "description": "후원자의 국가 선택 라벨"
+    }
+}
