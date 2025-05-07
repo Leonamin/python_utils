@@ -28,6 +28,7 @@ DATE_PAT = re.compile(r"(\d{4})\D+(\d{1,2})\D+(\d{1,2})")
 
 # ----------------------------- util --------------------------------------- #
 
+
 def parse_kr_date(text: str) -> dt.date:
     m = DATE_PAT.search(str(text))
     if not m:
@@ -35,11 +36,14 @@ def parse_kr_date(text: str) -> dt.date:
     y, mth, d = map(int, m.groups())
     return dt.date(y, mth, d)
 
+
 def pad(num: int, width: int) -> str:
     return f"{num:0{width}d}"
 
+
 def visit_day(reg_date: dt.date, rule: int) -> str:
     return (reg_date + dt.timedelta(days=int(rule))).strftime("%Y%m%d")
+
 
 def format_result(val, kind: str, part: str | None, missing_empty: bool) -> str:
     if pd.isna(val) or val == "" or val == "-":
@@ -55,27 +59,28 @@ def format_result(val, kind: str, part: str | None, missing_empty: bool) -> str:
     else:
         raise ValueError(kind)
 
+
 # ------------------- 매핑 테이블 ----------------------------------------- #
 # key = (column offset within 1~14, optional .1 for 분)
 BASE_MAP = {
-    1:   {"code": "01", "kind": "N2", "part": "hh"},
-    1.1: {"code": "01", "kind": "N2", "part": "mm"},
-    2:   {"code": "02", "kind": "N2", "part": "hh"},
-    2.1: {"code": "02", "kind": "N2", "part": "mm"},
-    3:   {"code": "03", "kind": "N3", "part": None},
-    4:   {"code": "05", "kind": "N1", "part": None},
-    5:   {"code": "06", "kind": "N3", "part": None},
-    6:   {"code": "07", "kind": "N2", "part": "hh"},
-    6.1: {"code": "07", "kind": "N2", "part": "mm"},
-    7:   {"code": "08", "kind": "N2", "part": "hh"},
-    7.1: {"code": "08", "kind": "N2", "part": "mm"},
-    8:   {"code": "10", "kind": "N1", "part": None},
-    9:   {"code": "11", "kind": "N1", "part": None},
-    10:  {"code": "11", "kind": "N3", "part": None},
-    11:  {"code": "17", "kind": "N1", "part": None},
-    12:  {"code": "18", "kind": "N3", "part": None},
-    13:  {"code": "20", "kind": "N3", "part": None},
-    14:  {"code": "12", "kind": "C255", "part": None},
+    1:   {"code": "SD01RE", "kind": "N2", "part": "hh"},
+    1.1: {"code": "SD01REMI", "kind": "N2", "part": "mm"},
+    2:   {"code": "SD02RE", "kind": "N2", "part": "hh"},
+    2.1: {"code": "SD02REMI", "kind": "N2", "part": "mm"},
+    3:   {"code": "SD03RE", "kind": "N3", "part": None},
+    4:   {"code": "SD05RE", "kind": "N1", "part": None},
+    5:   {"code": "SD06RE", "kind": "N3", "part": None},
+    6:   {"code": "SD07RE", "kind": "N2", "part": "hh"},
+    6.1: {"code": "SD07REMI", "kind": "N2", "part": "mm"},
+    7:   {"code": "SD08RE", "kind": "N2", "part": "hh"},
+    7.1: {"code": "SD08REMI", "kind": "N2", "part": "mm"},
+    8:   {"code": "SD10RE", "kind": "N1", "part": None},
+    9:   {"code": "SD11RE", "kind": "N1", "part": None},
+    10:  {"code": "SD11REMI", "kind": "N3", "part": None},
+    11:  {"code": "SD17RE", "kind": "N1", "part": None},
+    12:  {"code": "SD18RE", "kind": "N3", "part": None},
+    13:  {"code": "SD20RE", "kind": "N3", "part": None},
+    14:  {"code": "SD12RE", "kind": "C255", "part": None},
 }
 
 SEQ_COLS = [
@@ -84,6 +89,7 @@ SEQ_COLS = [
 ]
 
 # --------------------- subject‑level 처리 ---------------------------------- #
+
 
 def build_subject(df: pd.DataFrame, col_off: int, visit: str, missing_empty: bool) -> List[str]:
     subj_id = str(df.iat[0, col_off + 2]).strip()
@@ -106,14 +112,16 @@ def build_subject(df: pd.DataFrame, col_off: int, visit: str, missing_empty: boo
 
         # 미실시 여부
         not_done = str(row[col_off + 1]).strip() == "-"
-        nd_code = f"{visit}SDND{pad(rule_i,2)}"
-        lines.append("|".join(header_common + [visit_date, nd_code, "1" if not_done else "0", ""]))
+        nd_code = f"{visit}SDND{pad(rule_i, 2)}"
+        lines.append("|".join(header_common +
+                     [visit_date, nd_code, "1" if not_done else "0", ""]))
         if not_done:
             continue
 
         # 검사일
-        d_code = f"{visit}SDDTC{pad(rule_i,2)}"
-        lines.append("|".join(header_common + [visit_date, d_code, visit_date, ""]))
+        d_code = f"{visit}SDDTC{pad(rule_i, 2)}"
+        lines.append("|".join(header_common +
+                     [visit_date, d_code, visit_date, ""]))
 
         drink_flag = str(row[col_off + 11]).strip()
 
@@ -121,16 +129,19 @@ def build_subject(df: pd.DataFrame, col_off: int, visit: str, missing_empty: boo
             base = BASE_MAP[key]
             col_idx = int(key) if isinstance(key, float) else key
             val = row[col_off + col_idx]
-            if base["code"] in {"18", "20"} and drink_flag != "1":
+            if base["code"] in {"SD18RE", "SD20RE"} and drink_flag != "1":
                 res = "" if missing_empty else MISSING_DEFAULT
             else:
-                res = format_result(val, base["kind"], base["part"], missing_empty)
-            full_code = f"{visit}SD{base['code']}RE{pad(rule_i,2)}"
-            lines.append("|".join(header_common + [visit_date, full_code, res, ""]))
+                res = format_result(
+                    val, base["kind"], base["part"], missing_empty)
+            full_code = f"{visit}{base['code']}{pad(rule_i, 2)}"
+            lines.append("|".join(header_common +
+                         [visit_date, full_code, res, ""]))
 
     return lines
 
 # -------------------- workbook 처리 --------------------------------------- #
+
 
 def iter_visits(option: str | None) -> Iterable[str]:
     if option:
@@ -153,24 +164,31 @@ def convert_workbook(path: str, selected_visit: str | None, split: bool, missing
                     all_lines.extend(lines)
                     if split:
                         subj_id = str(df.iat[0, col + 2]).strip()
-                        outp = pathlib.Path(path).with_suffix("").parent / f"{subj_id}_{visit}.txt"
+                        outp = pathlib.Path(path).with_suffix(
+                            "").parent / f"{subj_id}_{visit}.txt"
                         outp.write_text("\n".join(lines), encoding="utf-8")
             col += 15
 
     if not split and all_lines:
-        outf = pathlib.Path(path).with_suffix("").parent / f"NVP-1704-2_{dt.date.today().strftime('%Y%m%d')}.txt"
+        outf = pathlib.Path(path).with_suffix(
+            "").parent / f"NVP-1704-2_{dt.date.today().strftime('%Y%m%d')}.txt"
         outf.write_text("\n".join(all_lines), encoding="utf-8")
 
 # -------------------- CLI -------------------------------------------------- #
 
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("excel", help="input workbook (.xlsx)")
-    ap.add_argument("--visit", choices=["V2", "V3", "V4"], help="특정 Visit 만 출력")
-    ap.add_argument("--split", action="store_true", help="피험자+Visit 별 txt 분리 저장")
-    ap.add_argument("--missing-empty", action="store_true", help="빈 값은 \"\" 로 기록 (기본 0)")
+    ap.add_argument(
+        "--visit", choices=["V2", "V3", "V4"], help="특정 Visit 만 출력")
+    ap.add_argument("--split", action="store_true",
+                    help="피험자+Visit 별 txt 분리 저장")
+    ap.add_argument("--missing-empty", action="store_true",
+                    help="빈 값은 \"\" 로 기록 (기본 0)")
     args = ap.parse_args()
     convert_workbook(args.excel, args.visit, args.split, args.missing_empty)
+
 
 if __name__ == "__main__":
     main()
